@@ -1,9 +1,14 @@
-def min_heap_from_list(lst):
-    """
-    Rearrange input list into min-heap and return it.
-    Elements are sored in list like this: for every item A[i] in list correct: A[i] ≤ A[2i + 1] and A[i] ≤ A[2i + 2].
-    """
+"""
+Rearrange input list into min-heap and return it.
+Elements are sored in list like this: for every item A[i] in list correct: A[i] ≤ A[2i + 1] and A[i] ≤ A[2i + 2].
 
+Переставить элементы заданного массива чисел так, чтобы он удовлетворял свойству мин-кучи.
+Вход. Массив чисел A[0 . . . n − 1].
+Выход. Переставить элементы массива так, чтобы выполнялись неравенства A[i] ≤ A[2i + 1] и A[i] ≤ A[2i + 2] для всех i.
+
+"""
+
+def min_heap_from_list(lst):
     def shift_down(lst, pos):
         was_shiftodwn = False
         while True:
