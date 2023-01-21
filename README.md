@@ -1,2 +1,2 @@
 # selflearning
-my selflearning
+my selflearning - solving programming tasks
