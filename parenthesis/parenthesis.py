@@ -13,33 +13,9 @@ def test(m=10):
         s = ''.join(list(s))
     return s
 
-# test data
-s = test()
-#s = input()
-#s = '([](){([])})'
-#s = '()[]}'
-#s = '{{[()]]'
-#s = 'abc'
-#s = '[]([]'
-#s = '{{{[][][]'
-#s = '}*(]'
-#s = '{([{()[]]}'
-#s = {}(*{{]*}(}*(](*(*}
-#s = '()}['
-#s = '[]{'
-#s = '()*((}{(}}[)(}])]))['
-#s = ''
-#s = '(){}'
-#s = '((('
-#s = '}}}'
-
-print(s)
-
-#s = re.sub('[^\(\)\{\}\[\]]', '', s)
-#print(s)
-
-
 def parenthesis(s):
+    if type(s) is not str:
+        raise TypeError('Incorrect input. Please enter a string.')
     d = dict((('(', ')'), ('[', ']'), ('{', '}')))
     st = []
 
@@ -59,4 +35,9 @@ def parenthesis(s):
     else:
         return st[len(st) - 1][1] + 1
 
-print(parenthesis(s))
+if __name__ == '__main__':
+    # s = test()
+    # s = re.sub('[^\(\)\{\}\[\]]', '', s)
+    s = 5
+    print(s)
+    print(parenthesis(s))
