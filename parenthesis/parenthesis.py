@@ -1,17 +1,8 @@
-import re
-
 """
 Check if everything ok with parenthesis in string s.
 If it's not ok, print place of mistake.
 """
 
-def test(m=10):
-    import random
-    for _ in range(m):
-        n = random.randint(0, 30)
-        s = (random.choice(['[', '(', '{', ']', ')', '}','*']) for _ in range(n))
-        s = ''.join(list(s))
-    return s
 
 def parenthesis(s):
     if type(s) is not str:
@@ -35,9 +26,10 @@ def parenthesis(s):
     else:
         return st[len(st) - 1][1] + 1
 
-if __name__ == '__main__':
-    # s = test()
-    # s = re.sub('[^\(\)\{\}\[\]]', '', s)
-    s = 5
+def main():
+    s = input('Please enter a string to check if it has correct parenthesis: ')
     print(s)
     print(parenthesis(s))
+
+if __name__ == '__main__':
+    main()
